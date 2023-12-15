@@ -162,6 +162,11 @@ select:focus {
   z-index: 100;
   pointer-events: none;
 }
+@media (max-width: 767px) {
+  .mouse-circle {
+    display: none;
+  }
+}
 .mouse-circle.active .circle {
   background-color: transparent;
   opacity: 0.8;
@@ -1040,7 +1045,8 @@ select:focus {
 }
 @media (max-width: 479px) {
   .sc-hero .elemets-group a.wine {
-    height: 69vh;
+    width: 147px;
+    height: 494px;
   }
 }
 .sc-hero .elemets-group a.hand-left {
@@ -1071,7 +1077,8 @@ select:focus {
 }
 @media (max-width: 479px) {
   .sc-hero .elemets-group a.hand-left {
-    height: 16vh;
+    width: 306px;
+    height: auto;
     left: -40%;
   }
 }
@@ -1139,6 +1146,8 @@ select:focus {
     height: 22vh;
     -webkit-transform: rotate(23deg);
             transform: rotate(23deg);
+    height: 10px;
+    width: 10px;
   }
 }
 @media (max-width: 479px) {
