@@ -102,7 +102,7 @@
         }
 
         @include s-mobile {
-          width: 306px;
+          width: 331px;
           height: auto;
           left: -40%;
         }
@@ -128,7 +128,8 @@
         }
 
         @include s-mobile {
-          height: 15vh;
+          height: 117px;
+          width: 162px;
         }
       }
 
@@ -146,7 +147,8 @@
         @include s-mobile {
           top: 14%;
           right: 6%;
-          height: 160px;
+          width: 120px;
+          height: 148px;
         }
       }
 
@@ -165,9 +167,9 @@
         }
 
         @include s-mobile {
-          right: -90%;
-          height: 150px;
-          width: 467px;
+          right: -80%;
+          height: 129px;
+          width: 475px;
         }
       }
     }

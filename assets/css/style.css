@@ -1077,7 +1077,7 @@ select:focus {
 }
 @media (max-width: 479px) {
   .sc-hero .elemets-group a.hand-left {
-    width: 306px;
+    width: 331px;
     height: auto;
     left: -40%;
   }
@@ -1107,7 +1107,8 @@ select:focus {
 }
 @media (max-width: 479px) {
   .sc-hero .elemets-group a.stone {
-    height: 15vh;
+    height: 117px;
+    width: 162px;
   }
 }
 .sc-hero .elemets-group a.cone {
@@ -1128,7 +1129,8 @@ select:focus {
   .sc-hero .elemets-group a.cone {
     top: 14%;
     right: 6%;
-    height: 160px;
+    width: 120px;
+    height: 148px;
   }
 }
 .sc-hero .elemets-group a.hand-right {
@@ -1150,9 +1152,9 @@ select:focus {
 }
 @media (max-width: 479px) {
   .sc-hero .elemets-group a.hand-right {
-    right: -90%;
-    height: 150px;
-    width: 467px;
+    right: -80%;
+    height: 129px;
+    width: 475px;
   }
 }
 .sc-hero .tag-wrapper {
