@@ -1,0 +1,807 @@
+.char {
+  display: inline-block;
+  transform-origin: bottom;
+}
+
+.sc-hero {
+  overflow: hidden;
+
+  .scroll {
+    margin: 0 0.9vh;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 4vh;
+    padding: 0 5px;
+    text-transform: uppercase;
+    transition: all 0.35s ease-in-out;
+    font-size: 3vh;
+    letter-spacing: 1.07px;
+    display: none;
+
+    @include l-mobile {
+      display: block;
+    }
+
+    @include s-mobile {
+      font-size: 2vh;
+    }
+
+    &::after {
+      content: "";
+      position: relative;
+      width: 120%;
+      left: 50%;
+      transform: translateX(-50%);
+      height: 1px;
+      display: block;
+      bottom: -7px;
+      background-color: $black;
+    }
+  }
+
+  .elemets-group {
+    position: relative;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    width: 100%;
+    height: 100vh;
+
+    @include l-mobile {
+      pointer-events: none;
+    }
+
+    a {
+      display: block;
+      position: absolute;
+      transition: opacity 0.3s ease-in-out;
+
+      img {
+        width: 100%;
+        height: 100%;
+      }
+
+      &.wine {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        transform-origin: center center;
+        height: 85vh;
+        opacity: 0;
+
+        @include tablet {
+          height: 72vh;
+        }
+
+        @include s-mobile {
+          width: 147px;
+          height: 494px;
+        }
+      }
+
+      &.hand-left {
+        top: 40%;
+        left: -10%;
+        height: 31vh;
+        transform: rotate(341deg);
+
+        @include desktop {
+          left: -30%;
+        }
+
+        @include tablet {
+          left: -40%;
+          height: 28vh;
+        }
+
+        @include l-mobile {
+          transform: rotate(310deg);
+          height: 20vh;
+          left: -40%;
+        }
+
+        @include s-mobile {
+          width: 306px;
+          height: auto;
+          left: -40%;
+        }
+      }
+
+      &.stone {
+        top: 50%;
+        left: 23%;
+        height: 24vh;
+        transform: rotate(330deg);
+
+        @include desktop {
+          left: 15%;
+        }
+
+        @include tablet {
+          left: 5%;
+        }
+
+        @include l-mobile {
+          top: 75%;
+          height: 17vh;
+        }
+
+        @include s-mobile {
+          height: 15vh;
+        }
+      }
+
+      &.cone {
+        top: 8%;
+        right: 13%;
+        height: 29vh;
+        transform: rotate(260deg);
+
+        @include l-mobile {
+          height: 23vh;
+          transform: rotate(335deg);
+        }
+
+        @include s-mobile {
+          top: 14%;
+          right: 6%;
+          height: 18vh;
+        }
+      }
+
+      &.hand-right {
+        top: 50%;
+        right: -10%;
+        height: 26vh;
+
+        @include tablet {
+          right: -60%;
+        } 
+
+        @include l-mobile {
+          height: 22vh;
+          transform: rotate(23deg);
+        }
+
+        @include s-mobile {
+          right: -90%;
+          height: 150px;
+          width: 467px;
+        }
+      }
+    }
+  }
+
+  .tag-wrapper {
+    position: absolute;
+    z-index: 2;
+    opacity: 0;
+    transform: scale(0);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    pointer-events: none;
+
+    @include l-mobile {
+      display: none;
+    }
+
+    .tag {
+      padding: 15px 25px;
+      border-radius: 100%;
+      background: #000;
+      color: #f5f5f0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 25px;
+    }
+  }
+}
+
+.sc-intro,
+.sc-inspire {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @include l-mobile {
+    height: 100%;
+    padding: 20vh 0 10vh 0;
+  }
+
+  .txt-group {
+    position: relative;
+  }
+
+  h3 {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    letter-spacing: 0.93px;
+    color: #1e1e1e;
+    font-size: 11px;
+    text-transform: uppercase;
+
+    @include l-mobile {
+      font-size: 3vw;
+    }
+  }
+
+  .txt-group {
+    text-align: center;
+    font-weight: bold;
+    font-size: 12.5vh;
+    padding-top: 50px;
+
+    @include tablet {
+      font-size: 10vw;
+    }
+
+    .se {
+      font-family: "BerlingskeSerif_L";
+      font-weight: 500;
+
+      @include tablet {
+        font-size: 12vh;
+      }
+
+      @include l-mobile {
+        font-size: 11vw;
+      }
+    }
+  }
+}
+
+.sc-image {
+  .image-wrapper {
+    margin: 0 auto;
+    width: 76vw;
+
+    @include tablet {
+      width: 100%;
+    }
+  }
+}
+
+.sc-chisiamo,
+.sc-controguerra {
+  margin: 27.7vh auto;
+
+  .cont-group {
+    margin: 0 auto;
+    width: 76vw;
+    text-align: center;
+
+    @include s-mobile {
+      width: 100%;
+    }
+  }
+
+  .main-txt {
+    font-size: 8.3vh;
+    line-height: 9.2vh;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    font-weight: bold;
+
+    @include s-mobile {
+      letter-spacing: 0.77px;
+      font-size: 13.3vw;
+      line-height: 15.9vw;
+    }
+  }
+
+  .desc {
+    font-size: 2.7vh;
+    line-height: 3.4vh;
+    letter-spacing: 2px;
+    font-family: "BerlingskeSerif_R";
+    margin: 9.2vh auto 3.7vh;
+
+    @include l-mobile {
+      white-space: initial;
+      font-size: 3vh;
+      line-height: 3.8vh;
+      margin: 9.2vh auto 7.6vh;
+    }
+
+    @include s-mobile {
+      letter-spacing: 0px;
+      font-size: 5.3vw;
+      line-height: 6.9vw;
+    }
+  }
+
+  .link {
+    font-family: "BerlingskeSerif_R";
+    cursor: pointer;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    white-space: nowrap;
+    font-size: 2vh;
+    line-height: 2vh;
+    letter-spacing: -0.1px;
+
+    @include l-mobile {
+      font-size: 2.5vh;
+    }
+
+    &:hover span {
+      letter-spacing: 2.5px;
+    }
+
+    span {
+      font-size: 1.4vh;
+      line-height: 1.9vh;
+      margin: 0 0.9vh;
+      position: relative;
+      font-family: "Gobold";
+      padding: 0 5px;
+      text-transform: uppercase;
+      transition: all 0.35s ease-in-out;
+      letter-spacing: 1.5px;
+
+      @include l-mobile {
+        font-size: 2vh;
+      }
+
+      &::after {
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 0.1px;
+        bottom: -5px;
+        left: 0;
+        background: $black;
+        content: "";
+      }
+    }
+  }
+}
+
+.sc-rosette {
+  position: relative;
+  height: 62.5vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 41.6vh auto;
+  width: 76vw;
+
+  @include l-mobile {
+    height: 86.5vh;
+    margin: 0 auto;
+    width: 87vw;
+  }
+
+  @include s-mobile {
+    height: 67.5vh;
+  }
+
+  .rosette-group {
+    width: 100%;
+    height: 100%;
+
+    path {
+      fill: none;
+      stroke: rgb(29, 29, 27);
+      stroke-width: 1.2;
+      stroke-linecap: round;
+      stroke-miterlimit: 10;
+    }
+  }
+
+  .title-group {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @include l-mobile {
+      flex-direction: column;
+    }
+
+    .title {
+      font-size: 4.6vh;
+      line-height: 4.6vh;
+      text-transform: uppercase;
+      flex: 1;
+
+      @include l-mobile {
+        display: flex;
+        align-items: center;
+        font-size: 6vh;
+      }
+
+      &.left {
+        text-align: left;
+      }
+      &.center {
+        text-align: center;
+      }
+      &.right {
+        text-align: right;
+      }
+    }
+  }
+}
+
+.sc-wines {
+  .inner {
+    height: max-content;
+    display: flex;
+    padding-bottom: 20.3vh;
+    justify-content: space-between;
+    position: relative;
+    z-index: 0;
+    width: 93.75vw;
+    margin: 0 auto;
+
+    @include tablet {
+      align-items: center;
+      flex-direction: column;
+      text-align: center;
+    }
+  }
+
+  h2 {
+    font-size: 12.5vh;
+    line-height: 12.5vh;
+    letter-spacing: -1.05px;
+    text-transform: uppercase;
+
+    @include tablet {
+      margin-bottom: 10vh;
+      font-size: 10vh;
+    }
+
+    @include l-mobile {
+      font-size: 6vh;
+    }
+  }
+
+  .content-group {
+    position: relative;
+    width: 70%;
+
+    ul {
+      li {
+        position: relative;
+        transition: color 0.5s ease;
+
+        &:not(:last-child) {
+          margin-bottom: 5.5vh;
+        }
+
+        .img-wrap {
+          position: absolute;
+          right: 10%;
+          height: 59.7vh;
+          transform: translateY(-50%);
+
+          @include tablet {
+            display: none;
+          }
+        }
+
+        img {
+          height: 100%;
+          opacity: 0;
+          object-fit: cover;
+          transform: scaleX(0);
+          transform-origin: center center;
+          transition: transform 0.5s ease, opacity 0.5s ease;
+        }
+
+        &:hover img {
+          opacity: 1;
+          transform: scaleX(1);
+
+          @include tablet {
+            opacity: 0;
+            transform: scaleX(0);
+          }
+        }
+
+        &:hover {
+          z-index: 1;
+          color: #fff;
+
+          @include tablet {
+            z-index: inherit;
+            color: inherit;
+          }
+        }
+
+        a {
+          h3 {
+            white-space: initial;
+            position: relative;
+            z-index: 0;
+            letter-spacing: -1.5px;
+            text-transform: uppercase;
+            font-size: 6.4vh;
+            line-height: 6.4vh;
+
+            @include l-mobile {
+              font-size: 5.8vw;
+              line-height: 7.7vw;
+            }
+          }
+
+          span {
+            text-transform: none;
+            font-family: "BerlingskeSerif_R";
+            font-weight: 300;
+            letter-spacing: 1px;
+            padding-bottom: 5.5vh;
+            font-size: 2.7vh;
+            line-height: 3vh;
+
+            @include tablet {
+              display: block;
+              padding-bottom: 0;
+              padding-top: 3vh;
+            }
+
+            @include l-mobile {
+              letter-spacing: 0px;
+              margin-top: 2.6vw;
+              padding: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.sc-buy {
+  .buy-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 27.7vh;
+  }
+
+  .buy-link {
+    display: flex;
+    flex-direction: column;
+    padding: 6.4vh 10.2vh;
+    font-family: "BerlingskeSerif_R";
+    background-color: $lightGray;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 2.3vh;
+    line-height: 2.3vh;
+    letter-spacing: 1.67px;
+    transition: transform 0.35s ease-in-out, color 0.35s ease-in-out,
+      background 0.35s ease-in-out;
+
+    @include l-mobile {
+      padding: 6.4vh 8.2vh;
+    }
+
+    &:hover {
+      transform: scale(1.1);
+      background-color: $black;
+      color: $lightGray;
+    }
+
+    .big-label {
+      font-size: 16.6vh;
+      line-height: 16.6vh;
+      letter-spacing: -5px;
+      font-family: "Gobold";
+      font-weight: 500;
+      margin-top: 2.7vh;
+      text-transform: uppercase;
+
+      @include l-mobile {
+        font-size: 8.3vh;
+        line-height: 8.3vh;
+      }
+    }
+  }
+}
+
+.sc-contact {
+  padding: 4.6vh 0 27.7vh;
+
+  .contact-wrapper {
+    width: 58.3vw;
+    margin: 0 auto;
+
+    @include l-mobile {
+      width: 83.3vw;
+    }
+  }
+
+  h2 {
+    font-size: 4.6vh;
+    line-height: 4.6vh;
+    text-align: center;
+    text-transform: uppercase;
+
+    @include l-mobile {
+      font-size: 9.3vw;
+      line-height: 11.9vw;
+    }
+  }
+
+  .form-group {
+    margin-top: 7.4vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    font-family: "BerlingskeSerif_R";
+  }
+
+  .half {
+    flex: 0 0 49%;
+    flex-basis: 49%;
+    width: 49%;
+    margin-top: 3.2vh;
+
+    @include l-mobile {
+      flex: 0 0 100%;
+    }
+  }
+
+  .full {
+    display: flex;
+    flex: 0 0 100%;
+    flex-basis: 100%;
+    width: 100%;
+    margin-top: 3.2vh;
+  }
+
+  input {
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+    border-bottom: 1px solid #b2b5a8;
+    padding: 1.4vh 0;
+
+    &::placeholder {
+      color: $black;
+    }
+  }
+
+  .end-wrapper {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5vh;
+    align-items: flex-start;
+
+    .privacy-wrapper {
+      font-size: 1.11vh;
+      line-height: 1.1vh;
+      letter-spacing: 0.2px;
+      display: flex;
+      align-items: center;
+
+      @include l-mobile {
+        font-size: 2.6vw;
+        line-height: 2.6vw;
+      }
+
+      .check-input-wrapper {
+        position: relative;
+        display: block;
+        width: 1.8vh;
+        height: 1.8vh;
+        margin-right: 0.9vh;
+
+        &::after {
+          content: "";
+          display: block;
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          left: 0;
+          top: 0;
+          border: 1px solid #b2b5a8;
+          border-radius: 100%;
+          transition: all 0.35s ease-in-out;
+          z-index: -1;
+        }
+
+        &.selected::after {
+          background-color: #b2b5a8;
+        }
+      }
+
+      .check-input {
+        opacity: 0;
+        cursor: pointer;
+      }
+
+      p {
+        color: $black;
+      }
+
+      a {
+        text-decoration: underline;
+      }
+    }
+
+    .submit-input {
+      border: 1px solid #1e1e1e;
+      background-color: rgba(0, 0, 0, 0);
+      color: #1e1e1e;
+      text-transform: uppercase;
+      font-family: "Gobold";
+      border-radius: 100%;
+      padding: 2.7vh 5.5vh;
+      width: max-content;
+      font-size: 1.4vh;
+      line-height: 1.9vh;
+      letter-spacing: 1px;
+      transition: all 0.35s ease-in-out;
+
+      @include l-mobile {
+        margin-top: 18.6vw;
+        font-size: 2vh;
+      }
+
+      &:disabled {
+        cursor: not-allowed;
+        opacity: 0.5;
+      }
+
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+  }
+}
+
+.sc-marquee {
+  background-color: #1e1e1e;
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 0.9vh 0;
+  z-index: 20;
+  overflow: hidden;
+
+  @keyframes marquee {
+    0% {
+      transform: translateX(-50%);
+    }
+    100% {
+      transform: translateX(0%);
+    }
+  }
+
+  .marquee-wrapper {
+    animation: marquee 80s infinite linear;
+    display: flex;
+
+    .marquee {
+      display: flex;
+      font-size: 1.5vh;
+      line-height: 1.9vh;
+      letter-spacing: 1px;
+    }
+
+    h3 {
+      text-transform: uppercase;
+      color: #fff;
+      margin: 0 2.3vh;
+    }
+
+    a {
+      font-family: "BerlingskeSerif_R";
+      font-weight: 300;
+      color: #fff;
+      margin: 0 2.3vh;
+    }
+  }
+}

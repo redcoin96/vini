@@ -1,0 +1,97 @@
+* {
+  padding: 0;
+  margin: 0;
+  font: inherit;
+  color: inherit;
+
+}
+
+*,
+:after,
+:before {
+  box-sizing: border-box;
+}
+
+:root{
+  --bg-color : #b2b5a8;
+}
+
+body {
+  margin: 0 auto;
+  font-family: 'Gobold', sans-serif;
+  background-color: var(--bg-color);
+  color: #1e1e1e;
+  font-weight: 400;
+  min-height: 100vh;
+  word-break: keep-all;
+  white-space: nowrap;
+  overflow-x: hidden;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+video {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+
+button {
+  background: none;
+  border: 0;
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+fieldset {
+  border: 0;
+}
+
+input {
+  border: none;
+  width: 100%;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+select{
+  background: transparent;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+
+  &:focus{
+    outline: none;
+  }
+}
+
+:root {
+  --sub-menu-left: -15px; 
+  --tab-effect-left: 5px; 
+}

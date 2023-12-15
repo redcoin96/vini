@@ -1,0 +1,803 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Wine</title>
+    <meta property="og:title" content="Vini" />
+    <meta
+      property="og:description"
+      content="I vini delle colline teramane della Cantina Lidia&amp;Amato a Controguerra portano nel calice storia e futuro di un territorio. Scopri di più e assapora l'Abruzzo!"
+    />
+    <meta property="og:url" content="https://www.lidiaeamato.com/" />
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="https://www.lidiaeamato.com/dist/cone.png"
+    />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/gsap@3.9.0/dist/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.1/ScrollToPlugin.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1/bundled/lenis.min.js"></script>
+    <script src="./assets/js/split.min.js"></script>
+    <script src="./assets/js/main.js" defer></script>
+  </head>
+  <body>
+    <div class="preloader">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="1801"
+        height="182"
+        viewBox="0 0 1801 182"
+        id="logo"
+      >
+        <g fill="#f5f5f0" fill-rule="evenodd" transform="translate(.258 .82)">
+          <polygon
+            points="1116.164 93.473 1113.359 100.162 1110.555 93.473 1060.931 4.581 1015.405 4.581 1015.405 177.187 1060.931 177.187 1060.931 87.218 1095.45 151.297 1131.049 151.297 1165.572 87.218 1165.572 177.187 1211.098 177.187 1211.098 4.581 1165.572 4.581"
+          ></polygon>
+          <path
+            d="M1319.08397,108.359932 L1340.44538,43.4175949 L1361.58924,108.359932 L1319.08397,108.359932 Z M1312.39861,4.58134152 L1248.10201,177.187104 L1294.49038,177.187104 L1304.62894,149.356154 L1376.26182,149.356154 L1386.6162,177.187104 L1432.78875,177.187104 L1368.49561,4.58134152 L1312.39861,4.58134152 Z"
+          ></path>
+          <polygon
+            points="1431.974 45.36 1490.661 45.36 1490.661 177.187 1536.186 177.187 1536.186 45.36 1594.873 45.36 1594.873 4.365 1431.974 4.365"
+          ></polygon>
+          <path
+            d="M1708.51993 137.703378C1683.49297 137.703378 1663.6406 116.775346 1663.6406 90.8833594 1663.6406 64.5614512 1683.49297 44.0650672 1708.51993 44.0650672 1733.54689 44.0650672 1753.61163 65.2089235 1753.61163 90.8833594 1753.61163 116.775346 1733.54689 137.703378 1708.51993 137.703378M1708.51993.912331672C1655.87611.912331672 1617.25396 40.397784 1617.25396 90.8833594 1617.25396 141.370662 1655.87611 180.856114 1708.51993 180.856114 1761.3813 180.856114 1800 141.370662 1800 90.8833594 1800 40.397784 1761.3813.912331672 1708.51993.912331672M61.0764961 140.010452 61.0764961 136.558992 61.0764961 42.5529172C61.0764961 27.4176041 63.4661007 14.9360643 71.4308736 4.58168684L0 4.58168684C6.63702299 13.3441456 9.29424941 26.3557495 10.0902087 39.3673534L10.356104 138.682702C9.82431342 152.75616 7.16881359 167.627305 0 177.187449L124.542597 177.187449 139.679636 125.139307C129.321806 134.169388 103.296872 140.010452 79.1332043 140.010452L61.0764961 140.010452ZM248.918923 4.5809962 177.486323 4.5809962C184.125072 13.343455 186.780572 26.3550589 187.576531 39.3666627L187.842427 138.683738C187.310636 152.757196 184.656863 167.628341 177.486323 177.186759L248.918923 177.186759C240.952423 166.830655 238.562819 151.695342 238.562819 136.558302L238.562819 42.5539531C238.562819 27.4169135 240.952423 14.9371002 248.918923 4.5809962M365.572717 139.478661 355.480781 139.478661 355.480781 136.558992 355.480781 42.5529172 366.900467 42.5529172C390.799965 42.5529172 410.450318 58.7518115 410.450318 90.0877454 409.654359 119.298244 394.783215 139.478661 365.572717 139.478661M368.494112 4.84585554 365.572717 4.84585554 365.838612 4.58168684 294.406012 4.58168684C301.043035 13.3441456 303.700261 26.3557495 304.49622 39.3673534L304.762116 138.682702C304.230325 152.75616 301.574825 167.627305 294.406012 177.187449L368.494112 177.187449C416.027213 177.187449 463.824484 144.523765 463.824484 90.3519142 463.824484 35.382377 422.931858 4.84585554 368.494112 4.84585554M570.759114 4.5809962 499.326514 4.5809962C505.965263 13.343455 508.620763 26.3550589 509.416722 39.3666627L509.682618 138.683738C509.150827 152.757196 506.497054 167.628341 499.326514 177.186759L570.759114 177.186759C562.792614 166.830655 560.40301 151.695342 560.40301 136.558302L560.40301 42.5539531C560.40301 27.4169135 562.792614 14.9371002 570.759114 4.5809962M668.05832 109.381212 685.075619 55.136844 688.268089 41.8420789 691.458833 55.9345299 708.743754 109.381212 668.05832 109.381212ZM768.067758 138.68322 727.439302 23.7007676C725.845656 17.0602915 727.70347 10.4215419 730.624865 4.58047822L652.555242 4.58047822C654.413056 9.62558258 657.866242 18.1221461 655.209016 25.8244769L614.050495 149.039324C609.535454 160.723178 604.224455 171.345177 596.257955 177.187967L656.006701 177.187967C652.819411 170.815113 650.165638 163.378677 653.085306 155.943969L656.27087 146.647993 720.534657 146.647993 723.987842 157.537614C725.579761 164.440532 722.924261 171.345177 720.002866 177.187967L789.577652 177.187967C779.221548 169.219741 773.644653 154.616219 768.067758 138.68322L768.067758 138.68322Z"
+          ></path>
+          <polygon
+            points="868.431 4.581 902.221 108.36 829.98 108.36 814.71 149.356 916.892 149.356 927.248 177.187 978.401 177.187 914.108 4.581"
+          ></polygon>
+          <path
+            d="M787.494,62.264392 C787.494,56.760014 789.716125,52.4694307 797.190546,47.6539632 L815.048696,65.2082329 C810.288479,71.4343267 806.319042,74.1778828 799.756263,74.1778828 C791.63955,74.1778828 787.494,68.4352349 787.494,62.264392 M802.556796,10.5443026 C809.162741,10.5443026 811.43321,15.4702721 811.43321,19.9766795 C811.43321,24.847398 808.789797,28.9083444 801.253219,33.5822313 C796.182215,28.4525239 793.866854,24.8076863 793.866854,20.0250241 C793.866854,14.5810768 797.102489,10.5443026 802.556796,10.5443026 M823.395046,73.4130022 L836.171833,85.9722387 L855.694418,85.9722387 L831.135361,62.3610812 L851.479805,32.4185077 L846.866349,18.2466334 L822.602539,54.1563119 L808.991808,41.068738 C818.950796,35.2052286 824.116761,29.2985544 824.116761,19.7660352 C824.116761,9.59985635 817.137873,0 802.753628,0 C787.989532,0 780.489213,9.95726107 780.489213,20.6310582 C780.489213,27.9414524 783.67305,33.6478418 789.500301,39.9947972 C776.842649,47.3638956 772.75753,54.7468067 772.75753,63.4643741 C772.75753,76.793671 782.467888,87.1221495 798.395707,87.1221495 C810.481858,87.1221495 816.680326,82.2427981 823.395046,73.4130022"
+          ></path>
+        </g>
+      </svg>
+    </div>
+
+    <div class="main-content">
+      <header class="header">
+        <div class="inner">
+          <a href="" class="logo">
+            <div class="txt">
+              Storia e futuro dal cuore delle colline teramane
+            </div>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="1801"
+              height="182"
+              viewBox="0 0 1801 182"
+              id="logo"
+            >
+              <g
+                fill="#1E1E1E"
+                fill-rule="evenodd"
+                transform="translate(.258 .82)"
+              >
+                <polygon
+                  points="1116.164 93.473 1113.359 100.162 1110.555 93.473 1060.931 4.581 1015.405 4.581 1015.405 177.187 1060.931 177.187 1060.931 87.218 1095.45 151.297 1131.049 151.297 1165.572 87.218 1165.572 177.187 1211.098 177.187 1211.098 4.581 1165.572 4.581"
+                ></polygon>
+                <path
+                  d="M1319.08397,108.359932 L1340.44538,43.4175949 L1361.58924,108.359932 L1319.08397,108.359932 Z M1312.39861,4.58134152 L1248.10201,177.187104 L1294.49038,177.187104 L1304.62894,149.356154 L1376.26182,149.356154 L1386.6162,177.187104 L1432.78875,177.187104 L1368.49561,4.58134152 L1312.39861,4.58134152 Z"
+                ></path>
+                <polygon
+                  points="1431.974 45.36 1490.661 45.36 1490.661 177.187 1536.186 177.187 1536.186 45.36 1594.873 45.36 1594.873 4.365 1431.974 4.365"
+                ></polygon>
+                <path
+                  d="M1708.51993 137.703378C1683.49297 137.703378 1663.6406 116.775346 1663.6406 90.8833594 1663.6406 64.5614512 1683.49297 44.0650672 1708.51993 44.0650672 1733.54689 44.0650672 1753.61163 65.2089235 1753.61163 90.8833594 1753.61163 116.775346 1733.54689 137.703378 1708.51993 137.703378M1708.51993.912331672C1655.87611.912331672 1617.25396 40.397784 1617.25396 90.8833594 1617.25396 141.370662 1655.87611 180.856114 1708.51993 180.856114 1761.3813 180.856114 1800 141.370662 1800 90.8833594 1800 40.397784 1761.3813.912331672 1708.51993.912331672M61.0764961 140.010452 61.0764961 136.558992 61.0764961 42.5529172C61.0764961 27.4176041 63.4661007 14.9360643 71.4308736 4.58168684L0 4.58168684C6.63702299 13.3441456 9.29424941 26.3557495 10.0902087 39.3673534L10.356104 138.682702C9.82431342 152.75616 7.16881359 167.627305 0 177.187449L124.542597 177.187449 139.679636 125.139307C129.321806 134.169388 103.296872 140.010452 79.1332043 140.010452L61.0764961 140.010452ZM248.918923 4.5809962 177.486323 4.5809962C184.125072 13.343455 186.780572 26.3550589 187.576531 39.3666627L187.842427 138.683738C187.310636 152.757196 184.656863 167.628341 177.486323 177.186759L248.918923 177.186759C240.952423 166.830655 238.562819 151.695342 238.562819 136.558302L238.562819 42.5539531C238.562819 27.4169135 240.952423 14.9371002 248.918923 4.5809962M365.572717 139.478661 355.480781 139.478661 355.480781 136.558992 355.480781 42.5529172 366.900467 42.5529172C390.799965 42.5529172 410.450318 58.7518115 410.450318 90.0877454 409.654359 119.298244 394.783215 139.478661 365.572717 139.478661M368.494112 4.84585554 365.572717 4.84585554 365.838612 4.58168684 294.406012 4.58168684C301.043035 13.3441456 303.700261 26.3557495 304.49622 39.3673534L304.762116 138.682702C304.230325 152.75616 301.574825 167.627305 294.406012 177.187449L368.494112 177.187449C416.027213 177.187449 463.824484 144.523765 463.824484 90.3519142 463.824484 35.382377 422.931858 4.84585554 368.494112 4.84585554M570.759114 4.5809962 499.326514 4.5809962C505.965263 13.343455 508.620763 26.3550589 509.416722 39.3666627L509.682618 138.683738C509.150827 152.757196 506.497054 167.628341 499.326514 177.186759L570.759114 177.186759C562.792614 166.830655 560.40301 151.695342 560.40301 136.558302L560.40301 42.5539531C560.40301 27.4169135 562.792614 14.9371002 570.759114 4.5809962M668.05832 109.381212 685.075619 55.136844 688.268089 41.8420789 691.458833 55.9345299 708.743754 109.381212 668.05832 109.381212ZM768.067758 138.68322 727.439302 23.7007676C725.845656 17.0602915 727.70347 10.4215419 730.624865 4.58047822L652.555242 4.58047822C654.413056 9.62558258 657.866242 18.1221461 655.209016 25.8244769L614.050495 149.039324C609.535454 160.723178 604.224455 171.345177 596.257955 177.187967L656.006701 177.187967C652.819411 170.815113 650.165638 163.378677 653.085306 155.943969L656.27087 146.647993 720.534657 146.647993 723.987842 157.537614C725.579761 164.440532 722.924261 171.345177 720.002866 177.187967L789.577652 177.187967C779.221548 169.219741 773.644653 154.616219 768.067758 138.68322L768.067758 138.68322Z"
+                ></path>
+                <polygon
+                  points="868.431 4.581 902.221 108.36 829.98 108.36 814.71 149.356 916.892 149.356 927.248 177.187 978.401 177.187 914.108 4.581"
+                ></polygon>
+                <path
+                  d="M787.494,62.264392 C787.494,56.760014 789.716125,52.4694307 797.190546,47.6539632 L815.048696,65.2082329 C810.288479,71.4343267 806.319042,74.1778828 799.756263,74.1778828 C791.63955,74.1778828 787.494,68.4352349 787.494,62.264392 M802.556796,10.5443026 C809.162741,10.5443026 811.43321,15.4702721 811.43321,19.9766795 C811.43321,24.847398 808.789797,28.9083444 801.253219,33.5822313 C796.182215,28.4525239 793.866854,24.8076863 793.866854,20.0250241 C793.866854,14.5810768 797.102489,10.5443026 802.556796,10.5443026 M823.395046,73.4130022 L836.171833,85.9722387 L855.694418,85.9722387 L831.135361,62.3610812 L851.479805,32.4185077 L846.866349,18.2466334 L822.602539,54.1563119 L808.991808,41.068738 C818.950796,35.2052286 824.116761,29.2985544 824.116761,19.7660352 C824.116761,9.59985635 817.137873,0 802.753628,0 C787.989532,0 780.489213,9.95726107 780.489213,20.6310582 C780.489213,27.9414524 783.67305,33.6478418 789.500301,39.9947972 C776.842649,47.3638956 772.75753,54.7468067 772.75753,63.4643741 C772.75753,76.793671 782.467888,87.1221495 798.395707,87.1221495 C810.481858,87.1221495 816.680326,82.2427981 823.395046,73.4130022"
+                ></path>
+              </g>
+            </svg>
+          </a>
+          <div class="langs-group">
+            <a href="" class="active">
+              <div class="button">ITA</div>
+            </a>
+            <a href="">
+              <div class="button">ENG</div>
+            </a>
+          </div>
+          <div class="icon-group">
+            <a href="" class="ico user">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="26"
+                height="28"
+                viewBox="0 0 26 28"
+              >
+                <g id="user">
+                  <path
+                    style="fill: none; stroke: #1e1e1e; stroke-width: 2.5px"
+                    d="M24 25C24 18.3725985 18.6274015 13 12 13 5.37259845 13 0 18.3725985 0 25L24 25ZM18 6.5C18 10.0898953 15.0899358 13 11.5000905 13 7.91024517 13 5 10.0898953 5 6.5 5 2.91010469 7.91024517 0 11.5000905 0 15.0899358 0 18 2.91010469 18 6.5Z"
+                    transform="translate(1 1)"
+                  ></path>
+                </g>
+              </svg>
+            </a>
+            <a href="" class="ico card">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="39.577"
+                height="29.961"
+                viewBox="0 0 39.577 29.961"
+              >
+                <g
+                  fill="none"
+                  fill-rule="evenodd"
+                  stroke="#1E1E1E"
+                  stroke-width="2.5"
+                  transform="translate(0 1.25)"
+                >
+                  <polygon
+                    points="35.011 19.119 11.88 19.119 8.621 6.373 38 6.373"
+                  ></polygon>
+                  <polyline points="8.64 5.889 6.868 0 0 0"></polyline>
+                  <path
+                    stroke-linejoin="round"
+                    d="M16.8746142,25.4515576 C18.8635883,25.4293018 20.4940123,23.7988778 20.5162682,21.8099037 C20.538524,19.8209296 18.9441839,18.2265895 16.9552098,18.2488454 C14.9662357,18.2711012 13.3358117,19.9015252 13.3135559,21.8904993"
+                    transform="rotate(135 16.915 21.85)"
+                  ></path>
+                  <path
+                    stroke-linejoin="round"
+                    d="M30.228583,25.4515576 C32.2175571,25.4293018 33.8479811,23.7988778 33.8702369,21.8099037 C33.8924928,19.8209296 32.2981527,18.2265895 30.3091786,18.2488454 C28.3202045,18.2711012 26.6897805,19.9015252 26.6675247,21.8904993"
+                    transform="rotate(135 30.269 21.85)"
+                  ></path>
+                </g>
+              </svg>
+            </a>
+            <a href="" class="hamburger">
+              <span class="line"></span>
+              <span class="line"></span>
+              <span class="line"></span>
+            </a>
+          </div>
+        </div>
+        <div class="menuPanel">
+          <div class="elements-group">
+            <div class="element cone">
+              <img src="https://www.lidiaeamato.com/dist/menu-pine.png" />
+            </div>
+            <div class="element stone">
+              <img src="https://www.lidiaeamato.com/dist/menu-stone.png" />
+            </div>
+          </div>
+          <div class="menu-group">
+            <a href="" data-motion="text"> Chi siamo </a>
+            <a href="" data-motion="text"> Territorio </a>
+            <a href="" data-motion="text"> Vini </a>
+            <a href="" data-motion="text"> Contatti </a>
+            <a href="" data-motion="text"> Shop </a>
+          </div>
+          <div class="company-group">
+            <div class="data-area">
+              <p>Underwine Società Agricola srl</p>
+              <p>Contrada San Biagio, 2 - Controguerra (TE)</p>
+              <div class="row">
+                <a href="">T. +39 0861 817041</a>
+                <a href="">E. info@lidiaeamato.com</a>
+              </div>
+            </div>
+            <div class="privacies-area">
+              <a href="">Privacy Policy</a>
+              <a href="">Cookie Policy</a>
+              <a href="">Preferenze cookie</a>
+              <a href="">Credits</a>
+            </div>
+          </div>
+          <div class="langs-group mo">
+            <a href="" class="active">
+              <div class="button">ITA</div>
+            </a>
+            <a href="">
+              <div class="button">ENG</div>
+            </a>
+          </div>
+        </div>
+      </header>
+      <main class="main">
+        <section class="sc-hero">
+          <div class="elemets-group">
+            <a href="" class="chi-siamo hand-left"
+              ><img src="https://www.lidiaeamato.com/dist/hand-left.png" alt />
+            </a>
+            <a href="" class="territorio stone"
+              ><img src="https://www.lidiaeamato.com/dist/stone.png" alt />
+            </a>
+            <a href="" class="territorio cone"
+              ><img src="https://www.lidiaeamato.com/dist/cone.png" alt />
+            </a>
+            <a href="" class="chi-siamo hand-right"
+              ><img src="https://www.lidiaeamato.com/dist/hand-right.png" alt />
+            </a>
+            <a href="" class="vini wine"
+              ><img src="https://www.lidiaeamato.com/dist/wine.png" alt />
+            </a>
+          </div>
+          <div class="tag-wrapper"><div class="tag"></div></div>
+          <span class="mo scroll">Scroll</span>
+        </section>
+        <section class="sc-intro">
+          <h2 class="blind">
+            Storia e FUTURO dal CUORE delle COLLINE TERAMANE
+          </h2>
+          <div class="txt-group">
+            <span class="se" data-motion="text"> Storia e </span>
+            <span data-motion="text"> FUTURO </span>
+            <span class="se" data-motion="text"> dal </span>
+            <br />
+            <span data-motion="text"> CUORE </span>
+            <span class="se" data-motion="text"> delle </span>
+            <span data-motion="text"> COLLINE </span>
+            <br />
+            <span data-motion="text"> TERAMANE </span>
+            <h3>una terra, i suoi vini</h3>
+          </div>
+        </section>
+        <section class="sc-image">
+          <div class="image-wrapper">
+            <img
+              src="https://www.lidiaeamato.com/wp-content/uploads/2023/11/Gruppo-Controguerra-F-scaled.jpg"
+              alt
+            />
+          </div>
+        </section>
+        <section class="sc-chisiamo">
+          <h2 class="blind">chi siamo</h2>
+          <div class="cont-group">
+            <div class="main-txt" data-motion="text">CHI SIAMO</div>
+            <p class="desc">
+              La storia di un’azienda familiare che per oltre due secoli si
+              <br class="ta"/>
+              è presa cura di un territorio unico. Un sapere tramandato <br class="ta"/>
+              che si rinnova fra tradizione e la voglia di futuro.
+            </p>
+            <a href="" class="link">Vai a <span>Cantina</span></a>
+          </div>
+        </section>
+        <section class="sc-rosette">
+          <div class="rosette-group">
+            <svg
+              version="1.1"
+              id="rosette-svg"
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+              x="0px"
+              y="0px"
+              viewBox="0 0 1345 671"
+              style="enable-background: new 0 0 1345 671"
+              xml:space="preserve"
+              width="100%"
+              height="100%"
+            >
+              <g>
+                <path
+                  style="stroke-dasharray: 846, 848"
+                  d="M80.4,601.3c-7.3,8.7-32.5,2.5-32.9-19.6c-0.3-16.6,13.8-33.5,37-31.1c21.5,2.2,31.1,19,36.1,34.7
+            c10.2,31.9-11.1,67-48.6,67c-52,0-76.8-63.7-62.1-132c15.7-72.7,65.2-114.7,110.3-99.2c32,11,38.8,61.7,17.1,86.6
+            c-10.6,12.2-27,20.3-48.1,15.7S61.3,494.7,68,479.7c8.9-20,34.8-20.3,37.6-4.1"
+                ></path>
+                <path
+                  style="stroke-dasharray: 1037, 1039"
+                  d="M481.5,526.3c0,0,21.4-14.4,35.1,0.5c16.4,17.8,12.5,35.3-0.4,48.2s-36.8,13.1-51.2,0.8
+            c-41.7-35.7-52.7-171-124.7-238.9c-40.8-38.4-101.1-24.6-126.2,15.7c-18.2,29.1-15.4,74.5,15.9,102.6c29.7,26.7,78.2,25.5,95,4.7
+            c31.2-38.7-6.9-100.5-47-87.4c-51.4,16.8-23.8,72.8,5.5,60.5c8.6-3.6,13.8-16.3,9.8-22.7"
+                ></path>
+                <path
+                  style="stroke-dasharray: 781, 783"
+                  d="M228.1,279.1c1.9-10.3-17.9-26.8-34.1-15.5c-12.1,8.5-16.7,30.6-0.5,44.7c16.2,14.2,33.2,15.6,47.5,11.4
+            c29.2-8.7,42.2-44.1,18.7-73.1c-25.1-31-89.1-29.8-132.7,20.1c-43.6,49.9-36.1,116-2.1,136.7c32,19.4,65.2-0.7,69.9-30.8
+            c2.3-14.8-1.4-31.4-17.6-45.5s-37.5-6.7-44.3,6.5c-9,17.6,10,34.9,19.9,31.7"
+                ></path>
+                <path
+                  style="stroke-dasharray: 1013, 1015"
+                  d="M527.1,482c0,0-14.2,16-1.7,32.5s31.3,16.7,45.5,5.2c14.2-11.6,17-34.9,6.5-49.9
+            c-30.2-43.5-159.3-66.7-219.7-140.7c-37.2-45.7-12.2-98.9,29.6-121.2c33.6-17.9,74.4-4.3,97.2,25.2c23.6,30.6,19.8,73.6-6.8,92.3
+            c-47.9,33.6-91.9-20.4-79.2-54c19-50.5,77.6-16.9,58,11.1c-5.4,7.6-17,9.2-22.4,4.3"
+                ></path>
+                <path
+                  style="stroke-dasharray: 773, 775"
+                  d="M309.2,212.7c-10.4,0.7-24.6-20.8-11.5-35.6c9.8-11.1,32.3-13.1,44.5,4.6s11.8,34.7,5.9,48.5
+            c-12,28.1-48.5,32.6-74.7,5.9c-27.9-28.4-17.2-89.9,34.9-125.2c54.9-37.2,116.9-23,133.6,13.1c15.7,34-5.6,65-36.1,66.3
+            c-14.9,0.6-31-5-43.2-22.7s-2.4-38,11.5-43.2c18.5-6.9,33.6,13.9,29.3,23.4"
+                ></path>
+                <path
+                  style="stroke-dasharray: 1021, 1023"
+                  d="M641.6,437.6c0,0,22.3-2.1,23.8,22.2c1.5,24.3-13,33.5-31.3,34.6c-18.2,1.2-35.2-13.5-37.8-31.6
+            c-7.4-52.5,71.5-157.2,65.5-252.6c-3.7-58.8-58.2-80.8-104.1-68.8c-35.2,9.2-58.7,40.6-56.1,81.2c2.6,40.6,35.2,69.7,67.5,66.7
+            c49.8-4.6,69.8-76.5,24.4-95.1c-46.1-19-66.9,40.1-37.5,49.1c10,3.1,21.4-5.4,22.1-12.6"
+                ></path>
+                <path
+                  style="stroke-dasharray: 760, 762"
+                  d="M618,96.1c8-6.3,4.1-30.8-15.2-32.9c-14.5-1.5-32.2,11.7-29.3,32.3c2.8,20.6,14.4,32.4,27.8,38.3
+            c27.3,12.1,59.8-5.4,61.2-41.5c1.5-38.4-46.6-78-111.2-69.2s-101.6,60-89.9,96.6c11,34.4,48.4,42.5,71.5,23.5
+            c11.3-9.3,19.3-23.8,16.5-44.3s-23.4-28.6-37-23.2c-18,7.1-15.2,31.8-5.8,35.7"
+                ></path>
+                <path
+                  style="stroke-dasharray: 503, 505"
+                  d="M672,7.5L672,510.1"
+                ></path>
+                <path
+                  style="stroke-dasharray: 520, 522"
+                  d="M206,174.1L555.8,558.5"
+                ></path>
+                <path
+                  style="stroke-dasharray: 509, 511"
+                  d="M422.7,49.8L609.3,522.3"
+                ></path>
+                <path
+                  style="stroke-dasharray: 528, 530"
+                  d="M51.7,376.5L522.6,615"
+                ></path>
+                <path
+                  style="stroke-dasharray: 389, 391"
+                  d="M671.2,662.1C605,662,562,614.5,568.9,575.2c6.4-36.9,41.6-50.3,67.4-34c12.6,8,22.7,21.7,22.6,43.3
+            c0,21.5-19.7,32.6-34,29c-19.2-4.8-19.7-30.5-10.7-35.9"
+                ></path>
+                <path
+                  style="stroke-dasharray: 214, 216"
+                  d="M518.7,632c11-69,75.4-121.9,153.3-121.9"
+                ></path>
+                <path
+                  style="stroke-dasharray: 924, 926"
+                  d="M672,7.5C327.2,7.5,44.2,236.8,7.8,531.3"
+                ></path>
+                <path
+                  style="stroke-dasharray: 1088, 1090"
+                  d="M478.8,631.6c-8.9,17,4.3,28.9,16.8,28c14.6-1,21.8-12.8,23.1-27.6c1.1-12-15.5-22.1-21.7-25.2
+            c-58.8-29.6-144.4,64.1-261,59.5c-21.8-0.9-62.4-9.5-87.5-39.5c-17.9-21.5-27.9-55.6-16.9-88.6c12.1-36.1,49.1-67,97.2-58.5
+            s77,52.8,67.1,85.2c-14.8,48.4-89.9,51.3-105.6,14.7c-4.1-9.6-4.8-20.6-1.6-29.7c8.3-23.9,38.4-26.6,51.9-14.4
+            c9.5,8.6,9.2,24.4-4,30.5"
+                ></path>
+              </g>
+              <g>
+                <path
+                  style="stroke-dasharray: 846, 848"
+                  d="M1263.6,601.3c7.3,8.7,32.5,2.5,32.9-19.6c0.3-16.6-13.8-33.5-37-31.1c-21.5,2.2-31.1,19-36.1,34.7
+            c-10.2,31.9,11.1,67,48.6,67c52,0,76.8-63.7,62.1-132c-15.7-72.7-65.2-114.7-110.3-99.2c-32,11-38.8,61.7-17.1,86.6
+            c10.6,12.2,27,20.3,48.1,15.7c21.1-4.6,27.9-28.6,21.2-43.7c-8.9-20-34.8-20.3-37.6-4.1"
+                ></path>
+                <path
+                  style="stroke-dasharray: 1037, 1039"
+                  d="M862.4,526.3c0,0-21.4-14.4-35.1,0.5c-16.4,17.8-12.5,35.3,0.4,48.2s36.8,13.1,51.2,0.8
+            c41.7-35.7,52.7-171,124.7-238.9c40.8-38.4,101.1-24.6,126.2,15.7c18.2,29.1,15.4,74.5-15.9,102.6c-29.7,26.7-78.2,25.5-95,4.7
+            c-31.2-38.7,6.9-100.5,47-87.4c51.4,16.8,23.8,72.8-5.5,60.5c-8.6-3.6-13.8-16.3-9.8-22.7"
+                ></path>
+                <path
+                  style="stroke-dasharray: 781, 783"
+                  d="M1115.9,279.1c-1.8-10.3,17.9-26.8,34.1-15.5c12.2,8.5,16.7,30.6,0.5,44.7c-16.2,14.2-33.2,15.6-47.5,11.4
+            c-29.2-8.7-42.2-44.1-18.7-73.1c25.1-31,89.1-29.8,132.7,20.1c43.6,49.9,36.1,116,2.1,136.7c-32,19.4-65.2-0.7-69.9-30.8
+            c-2.3-14.8,1.4-31.4,17.7-45.5s37.5-6.7,44.3,6.5c9,17.6-10,34.9-19.9,31.7"
+                ></path>
+                <path
+                  style="stroke-dasharray: 1013, 1015"
+                  d="M816.8,482c0,0,14.2,16,1.7,32.5c-12.9,17-31.3,16.7-45.5,5.2c-14.2-11.6-17-34.9-6.5-49.9
+            c30.2-43.5,159.3-66.7,219.7-140.7c37.2-45.7,12.2-98.9-29.6-121.2c-33.6-17.9-74.4-4.3-97.2,25.2c-23.6,30.6-19.8,73.6,6.8,92.3
+            c47.9,33.6,91.9-20.4,79.2-54c-19-50.5-77.6-16.9-58,11.1c5.4,7.6,17,9.2,22.4,4.3"
+                ></path>
+                <path
+                  style="stroke-dasharray: 773, 775"
+                  d="M1034.7,212.7c10.4,0.7,24.6-20.8,11.5-35.6c-9.8-11.1-32.3-13.1-44.5,4.6s-11.8,34.7-5.9,48.5
+            c12,28.1,48.5,32.6,74.7,5.9c27.9-28.4,17.2-89.9-34.9-125.2c-54.9-37.2-116.9-23-133.6,13.1c-15.7,34,5.6,65,36.1,66.3
+            c14.9,0.6,31-5,43.3-22.7c12.2-17.7,2.4-38-11.4-43.2c-18.5-6.9-33.6,13.9-29.3,23.4"
+                ></path>
+                <path
+                  style="stroke-dasharray: 1021, 1023"
+                  d="M702.4,437.6c0,0-22.3-2.1-23.8,22.2c-1.5,24.3,13,33.5,31.3,34.6c18.2,1.2,35.2-13.5,37.8-31.6
+            c7.4-52.5-71.5-157.2-65.5-252.6c3.7-58.8,58.2-80.8,104.1-68.8c35.2,9.2,58.7,40.6,56.1,81.2c-2.6,40.6-35.2,69.7-67.5,66.7
+            c-49.8-4.6-69.8-76.5-24.4-95.1c46.1-19,66.9,40.1,37.5,49.1c-10,3.1-21.4-5.4-22.1-12.6"
+                ></path>
+                <path
+                  style="stroke-dasharray: 760, 762"
+                  d="M726,96.1c-8-6.3-4.1-30.8,15.2-32.9c14.5-1.5,32.2,11.7,29.3,32.3c-2.8,20.6-14.4,32.4-27.8,38.3
+            c-27.3,12.1-59.8-5.4-61.2-41.5c-1.5-38.4,46.6-78,111.2-69.2s101.6,60,89.9,96.6c-11,34.4-48.4,42.5-71.5,23.5
+            c-11.3-9.3-19.3-23.8-16.5-44.3s23.4-28.6,37-23.2c18,7.1,15.2,31.8,5.8,35.7"
+                ></path>
+                <path
+                  style="stroke-dasharray: 520, 522"
+                  d="M1138,174.1L788.2,558.5"
+                ></path>
+                <path
+                  style="stroke-dasharray: 509, 511"
+                  d="M921.3,49.8L734.6,522.3"
+                ></path>
+                <path
+                  style="stroke-dasharray: 528, 530"
+                  d="M1292.2,376.5L821.3,615"
+                ></path>
+                <path
+                  style="stroke-dasharray: 389, 391"
+                  d="M672.7,662.1c66.3-0.1,109.2-47.6,102.4-86.8c-6.4-36.9-41.6-50.3-67.4-34c-12.6,8-22.7,21.7-22.6,43.3
+            c0,21.5,19.7,32.6,34,29c19.2-4.8,19.7-30.5,10.7-35.9"
+                ></path>
+                <path
+                  style="stroke-dasharray: 214, 216"
+                  d="M825.2,632c-11-69-75.4-121.9-153.3-121.9"
+                ></path>
+                <path
+                  style="stroke-dasharray: 924, 926"
+                  d="M672,7.5c344.8,0,627.8,229.2,664.2,523.8"
+                ></path>
+                <path
+                  style="stroke-dasharray: 1088, 1090"
+                  d="M865.1,631.6c8.9,17-4.3,28.9-16.8,28c-14.6-1-21.8-12.8-23.1-27.6c-1.1-12,15.5-22.1,21.7-25.2
+            c58.8-29.6,144.3,64.1,261.1,59.5c21.8-0.9,62.4-9.5,87.5-39.5c17.9-21.5,27.9-55.6,16.9-88.6c-12.1-36.1-49.1-67-97.2-58.5
+            c-47.4,8.4-77,52.8-67.1,85.2c14.8,48.4,89.9,51.3,105.6,14.7c4.1-9.6,4.8-20.6,1.6-29.7c-8.3-23.9-38.4-26.6-51.9-14.4
+            c-9.5,8.6-9.2,24.4,4,30.5"
+                ></path>
+              </g>
+            </svg>
+          </div>
+          <div class="title-group">
+            <h3 class="title left">Controguerra</h3>
+            <h3 class="title center">Una terra</h3>
+            <h3 class="title right">I suoi vini</h3>
+          </div>
+        </section>
+        <section class="sc-inspire">
+          <h2 class="blind">
+            Storia e FUTURO dal CUORE delle COLLINE TERAMANE
+          </h2>
+          <div class="txt-group">
+            <span class="se" data-motion="text"> Sfumature </span>
+            <span class="se" data-motion="text"> di un </span><br />
+            <span data-motion="text"> TERRITORIO </span>
+            <span class="se" data-motion="text"> in cui </span><br />
+            <span class="se" data-motion="text"> si </span>
+            <span class="se" data-motion="text"> incontrano </span><br />
+            <span data-motion="text"> MARE </span>
+            <span class="se" data-motion="text"> e</span>
+            <span data-motion="text"> MONTAGNA </span>
+            <h3>Le colline teramane</h3>
+          </div>
+        </section>
+        <section class="sc-image">
+          <div class="image-wrapper">
+            <img
+              src="https://www.lidiaeamato.com/wp-content/uploads/2023/11/Gruppo-Montepulciano-scaled.jpg"
+              alt
+            />
+          </div>
+        </section>
+        <section class="sc-controguerra">
+          <h2 class="blind">chi siamo</h2>
+          <div class="cont-group">
+            <div class="main-txt" data-motion="text">CONTROGUERRA</div>
+            <p class="desc">
+              Un territorio con la vocazione per i grandi vini, espressione
+              <br />
+              diretta del costante dialogo tra la dolcezza del mare e le <br />
+              correnti fredde delle montagne.
+            </p>
+            <a href="" class="link">Vai a <span>TERRITORIO</span></a>
+          </div>
+        </section>
+        <section class="sc-wines">
+          <div class="inner">
+            <h2>Vini</h2>
+            <div class="content-group">
+              <ul>
+                <li>
+                  <div class="img-wrap">
+                    <img
+                      src="https://www.lidiaeamato.com/wp-content/uploads/2023/03/Passerina-Brut-scaled.jpg"
+                    />
+                  </div>
+                  <a href="">
+                    <h3>Passerina <span>Brut</span></h3>
+                  </a>
+                </li>
+                <li>
+                  <div class="img-wrap">
+                    <img
+                      src="https://www.lidiaeamato.com/wp-content/uploads/2023/03/Rosato-3-scaled.jpg"
+                    />
+                  </div>
+                  <a href="">
+                    <h3>ROSATO <span>Brut</span></h3>
+                  </a>
+                </li>
+                <li>
+                  <div class="img-wrap">
+                    <img
+                      src="https://www.lidiaeamato.com/wp-content/uploads/2023/03/Trebbiano-DOC-scaled.jpg"
+                    />
+                  </div>
+                  <a href="">
+                    <h3>TREBBIANO D’ABRUZZO <span>DOC</span></h3>
+                  </a>
+                </li>
+                <li>
+                  <div class="img-wrap">
+                    <img
+                      src="https://www.lidiaeamato.com/wp-content/uploads/2023/03/Montepulciano-DOC-Senza-Solfiti-scaled.jpg"
+                    />
+                  </div>
+                  <a href="">
+                    <h3>
+                      MONTEPULCIANO D’ABRUZZO <span>DOC Senza solfiti</span>
+                    </h3>
+                  </a>
+                </li>
+                <li>
+                  <div class="img-wrap">
+                    <img
+                      src="https://www.lidiaeamato.com/wp-content/uploads/2023/03/Montepulciano-DOCG-Riserva-2-scaled.jpg"
+                    />
+                  </div>
+                  <a href="">
+                    <h3>
+                      MONTEPULCIANO D’ABRUZZO
+                      <span>Colline Teramane DOCG Riserva</span>
+                    </h3>
+                  </a>
+                </li>
+                <li>
+                  <div class="img-wrap">
+                    <img
+                      src="https://www.lidiaeamato.com/wp-content/uploads/2023/03/Montepulciano-DOCG-2-scaled.jpg"
+                    />
+                  </div>
+                  <a href="">
+                    <h3>
+                      MONTEPULCIANO D’ABRUZZO <span>Colline Teramane DOCG</span>
+                    </h3>
+                  </a>
+                </li>
+                <li>
+                  <div class="img-wrap">
+                    <img
+                      src="https://www.lidiaeamato.com/wp-content/uploads/2023/03/Montepulciano-DOC-scaled.jpg"
+                    />
+                  </div>
+                  <a href="">
+                    <h3>MONTEPULCIANO D’ABRUZZO <span>DOC</span></h3>
+                  </a>
+                </li>
+                <li>
+                  <div class="img-wrap">
+                    <img
+                      src="https://www.lidiaeamato.com/wp-content/uploads/2023/03/Controguerra-Rosso-scaled.jpg"
+                    />
+                  </div>
+                  <a href="">
+                    <h3>ROSSO <span>Controguerra DOC</span></h3>
+                  </a>
+                </li>
+                <li>
+                  <div class="img-wrap">
+                    <img
+                      src="https://www.lidiaeamato.com/wp-content/uploads/2023/03/Controguerra-Pecorino-scaled.jpg"
+                    />
+                  </div>
+                  <a href="">
+                    <h3>PECORINO <span>Controguerra DOC</span></h3>
+                  </a>
+                </li>
+                <li>
+                  <div class="img-wrap">
+                    <img
+                      src="https://www.lidiaeamato.com/wp-content/uploads/2023/03/Controguerra-Passerina-scaled.jpg"
+                    />
+                  </div>
+                  <a href="">
+                    <h3>PASSERINA <span>Controguerra DOC</span></h3>
+                  </a>
+                </li>
+                <li>
+                  <div class="img-wrap">
+                    <img
+                      src="https://www.lidiaeamato.com/wp-content/uploads/2023/03/Cerasuolo-3-scaled.jpg"
+                    />
+                  </div>
+                  <a href="">
+                    <h3>CERASUOLO D’ABRUZZO <span>DOC</span></h3>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+        <section class="sc-buy">
+          <div class="buy-wrapper">
+            <a href="" class="buy-link">
+              Acquista ora dal nostro <span class="big-label">Shop</span>
+            </a>
+          </div>
+        </section>
+        <section class="sc-contact">
+          <div class="contact-wrapper">
+            <h2>Contatti</h2>
+            <form>
+              <feildset>
+                <legend></legend>
+                <div class="form-group">
+                  <div class="half">
+                    <input placeholder="Nome" autocomplete="off" />
+                  </div>
+                  <div class="half">
+                    <input placeholder="Cognome" autocomplete="off" />
+                  </div>
+                  <div class="half">
+                    <input placeholder="E-mail" />
+                  </div>
+                  <div class="half">
+                    <input placeholder="Città" autocomplete="off" />
+                  </div>
+                  <div class="full message-wrapper">
+                    <input placeholder="Messaggio" autocomplete="off" />
+                  </div>
+                  <div class="full end-wrapper">
+                    <div class="privacy-wrapper">
+                      <div class="check-input-wrapper">
+                        <input class="check-input" type="checkbox" id="chk" />
+                      </div>
+                      <label for="chk">
+                        Ho letto e accetto
+                        <a href=""> l’informativa sulla privacy</a>.
+                      </label>
+                    </div>
+                    <input
+                      class="submit-input"
+                      type="submit"
+                      value="Invia"
+                      disabled
+                    />
+                  </div>
+                </div>
+              </feildset>
+            </form>
+          </div>
+        </section>
+        <section class="sc-marquee">
+          <div class="marquee-wrapper">
+            <div class="marquee">
+              <h3>Spedizione gratuita sopra i 100€</h3>
+              <a href="">Vai allo shop</a>
+              <h3>Spedizione gratuita sopra i 100€</h3>
+              <a href="">Vai allo shop</a>
+              <h3>Spedizione gratuita sopra i 100€</h3>
+              <a href="">Vai allo shop</a>
+              <h3>Spedizione gratuita sopra i 100€</h3>
+              <a href="">Vai allo shop</a>
+              <h3>Spedizione gratuita sopra i 100€</h3>
+              <a href="">Vai allo shop</a>
+            </div>
+            <div class="marquee">
+              <h3>Spedizione gratuita sopra i 100€</h3>
+              <a href="">Vai allo shop</a>
+              <h3>Spedizione gratuita sopra i 100€</h3>
+              <a href="">Vai allo shop</a>
+              <h3>Spedizione gratuita sopra i 100€</h3>
+              <a href="">Vai allo shop</a>
+              <h3>Spedizione gratuita sopra i 100€</h3>
+              <a href="">Vai allo shop</a>
+              <h3>Spedizione gratuita sopra i 100€</h3>
+              <a href="">Vai allo shop</a>
+            </div>
+          </div>
+        </section>
+      </main>
+      <footer class="footer">
+        <div class="logo-area">
+          <a class="logo">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1801 182">
+              <g
+                fill="#1E1E1E"
+                fill-rule="evenodd"
+                transform="translate(.258 .82)"
+              >
+                <polygon
+                  points="1116.164 93.473 1113.359 100.162 1110.555 93.473 1060.931 4.581 1015.405 4.581 1015.405 177.187 1060.931 177.187 1060.931 87.218 1095.45 151.297 1131.049 151.297 1165.572 87.218 1165.572 177.187 1211.098 177.187 1211.098 4.581 1165.572 4.581"
+                ></polygon>
+                <path
+                  d="M1319.08397,108.359932 L1340.44538,43.4175949 L1361.58924,108.359932 L1319.08397,108.359932 Z M1312.39861,4.58134152 L1248.10201,177.187104 L1294.49038,177.187104 L1304.62894,149.356154 L1376.26182,149.356154 L1386.6162,177.187104 L1432.78875,177.187104 L1368.49561,4.58134152 L1312.39861,4.58134152 Z"
+                ></path>
+                <polygon
+                  points="1431.974 45.36 1490.661 45.36 1490.661 177.187 1536.186 177.187 1536.186 45.36 1594.873 45.36 1594.873 4.365 1431.974 4.365"
+                ></polygon>
+                <path
+                  d="M1708.51993 137.703378C1683.49297 137.703378 1663.6406 116.775346 1663.6406 90.8833594 1663.6406 64.5614512 1683.49297 44.0650672 1708.51993 44.0650672 1733.54689 44.0650672 1753.61163 65.2089235 1753.61163 90.8833594 1753.61163 116.775346 1733.54689 137.703378 1708.51993 137.703378M1708.51993.912331672C1655.87611.912331672 1617.25396 40.397784 1617.25396 90.8833594 1617.25396 141.370662 1655.87611 180.856114 1708.51993 180.856114 1761.3813 180.856114 1800 141.370662 1800 90.8833594 1800 40.397784 1761.3813.912331672 1708.51993.912331672M61.0764961 140.010452 61.0764961 136.558992 61.0764961 42.5529172C61.0764961 27.4176041 63.4661007 14.9360643 71.4308736 4.58168684L0 4.58168684C6.63702299 13.3441456 9.29424941 26.3557495 10.0902087 39.3673534L10.356104 138.682702C9.82431342 152.75616 7.16881359 167.627305 0 177.187449L124.542597 177.187449 139.679636 125.139307C129.321806 134.169388 103.296872 140.010452 79.1332043 140.010452L61.0764961 140.010452ZM248.918923 4.5809962 177.486323 4.5809962C184.125072 13.343455 186.780572 26.3550589 187.576531 39.3666627L187.842427 138.683738C187.310636 152.757196 184.656863 167.628341 177.486323 177.186759L248.918923 177.186759C240.952423 166.830655 238.562819 151.695342 238.562819 136.558302L238.562819 42.5539531C238.562819 27.4169135 240.952423 14.9371002 248.918923 4.5809962M365.572717 139.478661 355.480781 139.478661 355.480781 136.558992 355.480781 42.5529172 366.900467 42.5529172C390.799965 42.5529172 410.450318 58.7518115 410.450318 90.0877454 409.654359 119.298244 394.783215 139.478661 365.572717 139.478661M368.494112 4.84585554 365.572717 4.84585554 365.838612 4.58168684 294.406012 4.58168684C301.043035 13.3441456 303.700261 26.3557495 304.49622 39.3673534L304.762116 138.682702C304.230325 152.75616 301.574825 167.627305 294.406012 177.187449L368.494112 177.187449C416.027213 177.187449 463.824484 144.523765 463.824484 90.3519142 463.824484 35.382377 422.931858 4.84585554 368.494112 4.84585554M570.759114 4.5809962 499.326514 4.5809962C505.965263 13.343455 508.620763 26.3550589 509.416722 39.3666627L509.682618 138.683738C509.150827 152.757196 506.497054 167.628341 499.326514 177.186759L570.759114 177.186759C562.792614 166.830655 560.40301 151.695342 560.40301 136.558302L560.40301 42.5539531C560.40301 27.4169135 562.792614 14.9371002 570.759114 4.5809962M668.05832 109.381212 685.075619 55.136844 688.268089 41.8420789 691.458833 55.9345299 708.743754 109.381212 668.05832 109.381212ZM768.067758 138.68322 727.439302 23.7007676C725.845656 17.0602915 727.70347 10.4215419 730.624865 4.58047822L652.555242 4.58047822C654.413056 9.62558258 657.866242 18.1221461 655.209016 25.8244769L614.050495 149.039324C609.535454 160.723178 604.224455 171.345177 596.257955 177.187967L656.006701 177.187967C652.819411 170.815113 650.165638 163.378677 653.085306 155.943969L656.27087 146.647993 720.534657 146.647993 723.987842 157.537614C725.579761 164.440532 722.924261 171.345177 720.002866 177.187967L789.577652 177.187967C779.221548 169.219741 773.644653 154.616219 768.067758 138.68322L768.067758 138.68322Z"
+                ></path>
+                <polygon
+                  points="868.431 4.581 902.221 108.36 829.98 108.36 814.71 149.356 916.892 149.356 927.248 177.187 978.401 177.187 914.108 4.581"
+                ></polygon>
+                <path
+                  d="M787.494,62.264392 C787.494,56.760014 789.716125,52.4694307 797.190546,47.6539632 L815.048696,65.2082329 C810.288479,71.4343267 806.319042,74.1778828 799.756263,74.1778828 C791.63955,74.1778828 787.494,68.4352349 787.494,62.264392 M802.556796,10.5443026 C809.162741,10.5443026 811.43321,15.4702721 811.43321,19.9766795 C811.43321,24.847398 808.789797,28.9083444 801.253219,33.5822313 C796.182215,28.4525239 793.866854,24.8076863 793.866854,20.0250241 C793.866854,14.5810768 797.102489,10.5443026 802.556796,10.5443026 M823.395046,73.4130022 L836.171833,85.9722387 L855.694418,85.9722387 L831.135361,62.3610812 L851.479805,32.4185077 L846.866349,18.2466334 L822.602539,54.1563119 L808.991808,41.068738 C818.950796,35.2052286 824.116761,29.2985544 824.116761,19.7660352 C824.116761,9.59985635 817.137873,0 802.753628,0 C787.989532,0 780.489213,9.95726107 780.489213,20.6310582 C780.489213,27.9414524 783.67305,33.6478418 789.500301,39.9947972 C776.842649,47.3638956 772.75753,54.7468067 772.75753,63.4643741 C772.75753,76.793671 782.467888,87.1221495 798.395707,87.1221495 C810.481858,87.1221495 816.680326,82.2427981 823.395046,73.4130022"
+                ></path>
+              </g>
+            </svg>
+          </a>
+        </div>
+        <div class="footer-group">
+          <div class="company-area">
+            <address>
+              <strong>Underwine Società Agricola srl</strong>
+              <p>Contrada San Biagio, 2 - Controguerra (TE)</p>
+              <a href="">T. +39 0861 817041</a>
+              <a href="">E. info@lidiaeamato.com</a>
+              <p>P.IVA 02444260448</p>
+            </address>
+            <div class="footer-logo-wrapper-mobile">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="1801"
+                height="182"
+                viewBox="0 0 1801 182"
+                id="logo"
+              >
+                <g
+                  fill="#1E1E1E"
+                  fill-rule="evenodd"
+                  transform="translate(.258 .82)"
+                >
+                  <polygon
+                    points="1116.164 93.473 1113.359 100.162 1110.555 93.473 1060.931 4.581 1015.405 4.581 1015.405 177.187 1060.931 177.187 1060.931 87.218 1095.45 151.297 1131.049 151.297 1165.572 87.218 1165.572 177.187 1211.098 177.187 1211.098 4.581 1165.572 4.581"
+                  ></polygon>
+                  <path
+                    d="M1319.08397,108.359932 L1340.44538,43.4175949 L1361.58924,108.359932 L1319.08397,108.359932 Z M1312.39861,4.58134152 L1248.10201,177.187104 L1294.49038,177.187104 L1304.62894,149.356154 L1376.26182,149.356154 L1386.6162,177.187104 L1432.78875,177.187104 L1368.49561,4.58134152 L1312.39861,4.58134152 Z"
+                  ></path>
+                  <polygon
+                    points="1431.974 45.36 1490.661 45.36 1490.661 177.187 1536.186 177.187 1536.186 45.36 1594.873 45.36 1594.873 4.365 1431.974 4.365"
+                  ></polygon>
+                  <path
+                    d="M1708.51993 137.703378C1683.49297 137.703378 1663.6406 116.775346 1663.6406 90.8833594 1663.6406 64.5614512 1683.49297 44.0650672 1708.51993 44.0650672 1733.54689 44.0650672 1753.61163 65.2089235 1753.61163 90.8833594 1753.61163 116.775346 1733.54689 137.703378 1708.51993 137.703378M1708.51993.912331672C1655.87611.912331672 1617.25396 40.397784 1617.25396 90.8833594 1617.25396 141.370662 1655.87611 180.856114 1708.51993 180.856114 1761.3813 180.856114 1800 141.370662 1800 90.8833594 1800 40.397784 1761.3813.912331672 1708.51993.912331672M61.0764961 140.010452 61.0764961 136.558992 61.0764961 42.5529172C61.0764961 27.4176041 63.4661007 14.9360643 71.4308736 4.58168684L0 4.58168684C6.63702299 13.3441456 9.29424941 26.3557495 10.0902087 39.3673534L10.356104 138.682702C9.82431342 152.75616 7.16881359 167.627305 0 177.187449L124.542597 177.187449 139.679636 125.139307C129.321806 134.169388 103.296872 140.010452 79.1332043 140.010452L61.0764961 140.010452ZM248.918923 4.5809962 177.486323 4.5809962C184.125072 13.343455 186.780572 26.3550589 187.576531 39.3666627L187.842427 138.683738C187.310636 152.757196 184.656863 167.628341 177.486323 177.186759L248.918923 177.186759C240.952423 166.830655 238.562819 151.695342 238.562819 136.558302L238.562819 42.5539531C238.562819 27.4169135 240.952423 14.9371002 248.918923 4.5809962M365.572717 139.478661 355.480781 139.478661 355.480781 136.558992 355.480781 42.5529172 366.900467 42.5529172C390.799965 42.5529172 410.450318 58.7518115 410.450318 90.0877454 409.654359 119.298244 394.783215 139.478661 365.572717 139.478661M368.494112 4.84585554 365.572717 4.84585554 365.838612 4.58168684 294.406012 4.58168684C301.043035 13.3441456 303.700261 26.3557495 304.49622 39.3673534L304.762116 138.682702C304.230325 152.75616 301.574825 167.627305 294.406012 177.187449L368.494112 177.187449C416.027213 177.187449 463.824484 144.523765 463.824484 90.3519142 463.824484 35.382377 422.931858 4.84585554 368.494112 4.84585554M570.759114 4.5809962 499.326514 4.5809962C505.965263 13.343455 508.620763 26.3550589 509.416722 39.3666627L509.682618 138.683738C509.150827 152.757196 506.497054 167.628341 499.326514 177.186759L570.759114 177.186759C562.792614 166.830655 560.40301 151.695342 560.40301 136.558302L560.40301 42.5539531C560.40301 27.4169135 562.792614 14.9371002 570.759114 4.5809962M668.05832 109.381212 685.075619 55.136844 688.268089 41.8420789 691.458833 55.9345299 708.743754 109.381212 668.05832 109.381212ZM768.067758 138.68322 727.439302 23.7007676C725.845656 17.0602915 727.70347 10.4215419 730.624865 4.58047822L652.555242 4.58047822C654.413056 9.62558258 657.866242 18.1221461 655.209016 25.8244769L614.050495 149.039324C609.535454 160.723178 604.224455 171.345177 596.257955 177.187967L656.006701 177.187967C652.819411 170.815113 650.165638 163.378677 653.085306 155.943969L656.27087 146.647993 720.534657 146.647993 723.987842 157.537614C725.579761 164.440532 722.924261 171.345177 720.002866 177.187967L789.577652 177.187967C779.221548 169.219741 773.644653 154.616219 768.067758 138.68322L768.067758 138.68322Z"
+                  ></path>
+                  <polygon
+                    points="868.431 4.581 902.221 108.36 829.98 108.36 814.71 149.356 916.892 149.356 927.248 177.187 978.401 177.187 914.108 4.581"
+                  ></polygon>
+                  <path
+                    d="M787.494,62.264392 C787.494,56.760014 789.716125,52.4694307 797.190546,47.6539632 L815.048696,65.2082329 C810.288479,71.4343267 806.319042,74.1778828 799.756263,74.1778828 C791.63955,74.1778828 787.494,68.4352349 787.494,62.264392 M802.556796,10.5443026 C809.162741,10.5443026 811.43321,15.4702721 811.43321,19.9766795 C811.43321,24.847398 808.789797,28.9083444 801.253219,33.5822313 C796.182215,28.4525239 793.866854,24.8076863 793.866854,20.0250241 C793.866854,14.5810768 797.102489,10.5443026 802.556796,10.5443026 M823.395046,73.4130022 L836.171833,85.9722387 L855.694418,85.9722387 L831.135361,62.3610812 L851.479805,32.4185077 L846.866349,18.2466334 L822.602539,54.1563119 L808.991808,41.068738 C818.950796,35.2052286 824.116761,29.2985544 824.116761,19.7660352 C824.116761,9.59985635 817.137873,0 802.753628,0 C787.989532,0 780.489213,9.95726107 780.489213,20.6310582 C780.489213,27.9414524 783.67305,33.6478418 789.500301,39.9947972 C776.842649,47.3638956 772.75753,54.7468067 772.75753,63.4643741 C772.75753,76.793671 782.467888,87.1221495 798.395707,87.1221495 C810.481858,87.1221495 816.680326,82.2427981 823.395046,73.4130022"
+                  ></path>
+                </g>
+              </svg>
+            </div>
+            <div class="privacies-box">
+              <a href="">Privacy Policy</a>
+              <a href="">Cookie Policy</a>
+              <a href="">Preferenze cookie</a>
+              <a href="">Condizioni di vendita</a>
+              <a href="">Credits</a>
+            </div>
+          </div>
+          <div class="menu-area">
+            <a href="">Chi siamo</a><a href="">Territorio</a><a href="">Vini</a
+            ><a href="">Contatti</a><a href="">Shop</a>
+          </div>
+          <button class="footer-top">
+            <span class="txt">Torna su</span>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="25"
+              height="31"
+              viewBox="0 0 25 31"
+            >
+              <g
+                fill="none"
+                fill-rule="evenodd"
+                stroke="#B2B5A8"
+                stroke-width="3"
+                transform="rotate(90 10.5 12.5)"
+              >
+                <line x1=".329" x2="28.82" y1="10.681" y2="10.681"></line>
+                <polyline points="11.081 21 .509 10.747 11.59 0"></polyline>
+              </g>
+            </svg>
+          </button>
+        </div>
+      </footer>
+      <div class="mouse-blur"></div>
+      <div class="mouse-circle">
+        <div class="circle"></div>
+      </div>
+    </div>
+  </body>
+</html>
