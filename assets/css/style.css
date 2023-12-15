@@ -1128,7 +1128,7 @@ select:focus {
   .sc-hero .elemets-group a.cone {
     top: 14%;
     right: 6%;
-    height: 18vh;
+    height: 160px;
   }
 }
 .sc-hero .elemets-group a.hand-right {
@@ -1146,13 +1146,13 @@ select:focus {
     height: 22vh;
     -webkit-transform: rotate(23deg);
             transform: rotate(23deg);
-    height: 10px;
-    width: 10px;
   }
 }
 @media (max-width: 479px) {
   .sc-hero .elemets-group a.hand-right {
     right: -90%;
+    height: 150px;
+    width: 467px;
   }
 }
 .sc-hero .tag-wrapper {
