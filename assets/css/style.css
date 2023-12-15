@@ -1,5 +1,4 @@
 @import url("https://fonts.cdnfonts.com/css/gobold");
-@import url("https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap");
 * {
   padding: 0;
   margin: 0;
@@ -1046,7 +1045,7 @@ select:focus {
 @media (max-width: 479px) {
   .sc-hero .elemets-group a.wine {
     width: 147px;
-    height: 494px;
+    height: auto;
   }
 }
 .sc-hero .elemets-group a.hand-left {
@@ -1077,7 +1076,7 @@ select:focus {
 }
 @media (max-width: 479px) {
   .sc-hero .elemets-group a.hand-left {
-    width: 331px;
+    width: 350px;
     height: auto;
     left: -40%;
   }
@@ -1107,8 +1106,8 @@ select:focus {
 }
 @media (max-width: 479px) {
   .sc-hero .elemets-group a.stone {
-    height: 117px;
     width: 162px;
+    height: auto;
   }
 }
 .sc-hero .elemets-group a.cone {
@@ -1130,7 +1129,7 @@ select:focus {
     top: 14%;
     right: 6%;
     width: 120px;
-    height: 148px;
+    height: auto;
   }
 }
 .sc-hero .elemets-group a.hand-right {
@@ -1153,8 +1152,8 @@ select:focus {
 @media (max-width: 479px) {
   .sc-hero .elemets-group a.hand-right {
     right: -80%;
-    height: 129px;
     width: 475px;
+    height: auto;
   }
 }
 .sc-hero .tag-wrapper {

@@ -76,7 +76,8 @@
 
         @include s-mobile {
           width: 147px;
-          height: 494px;
+          height: auto;
+          // height: 494px;
         }
       }
 
@@ -102,7 +103,7 @@
         }
 
         @include s-mobile {
-          width: 331px;
+          width: 350px;
           height: auto;
           left: -40%;
         }
@@ -128,8 +129,9 @@
         }
 
         @include s-mobile {
-          height: 117px;
           width: 162px;
+          height: auto;
+          // height: 117px;
         }
       }
 
@@ -148,7 +150,8 @@
           top: 14%;
           right: 6%;
           width: 120px;
-          height: 148px;
+          height: auto;
+          // height: 148px;
         }
       }
 
@@ -168,8 +171,9 @@
 
         @include s-mobile {
           right: -80%;
-          height: 129px;
           width: 475px;
+          height: auto;
+          // height: 129px;
         }
       }
     }
