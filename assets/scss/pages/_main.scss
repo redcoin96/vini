@@ -67,24 +67,20 @@
         left: 50%;
         transform: translate(-50%, -50%);
         transform-origin: center center;
-        height: 85vh;
         opacity: 0;
+        width: 174px;
+        height: auto;
 
-        @include tablet {
-          height: 72vh;
-        }
-
-        @include s-mobile {
-          width: 147px;
-          height: auto;
-          // height: 494px;
+        @include l-mobile {
+          width: 148px;
         }
       }
 
       &.hand-left {
         top: 40%;
         left: -10%;
-        height: 31vh;
+        width: 631px;
+        height: auto;
         transform: rotate(341deg);
 
         @include desktop {
@@ -93,26 +89,26 @@
 
         @include tablet {
           left: -40%;
-          height: 28vh;
+          width: 600px;
         }
 
         @include l-mobile {
           transform: rotate(310deg);
-          height: 20vh;
           left: -40%;
+          width: 460px;
         }
 
         @include s-mobile {
-          width: 350px;
-          height: auto;
           left: -40%;
+          width: 350px;
         }
       }
 
       &.stone {
         top: 50%;
         left: 23%;
-        height: 24vh;
+        width: 256px;
+        height: auto;
         transform: rotate(330deg);
 
         @include desktop {
@@ -120,29 +116,34 @@
         }
 
         @include tablet {
-          left: 5%;
+          left: 10%;
+          width: 233px;
         }
 
         @include l-mobile {
           top: 75%;
-          height: 17vh;
+          left: 10%;
+          width: 185px;
         }
 
         @include s-mobile {
           width: 162px;
-          height: auto;
-          // height: 117px;
         }
       }
 
       &.cone {
         top: 8%;
         right: 13%;
-        height: 29vh;
+        width: 173px;
+        height: auto;
         transform: rotate(260deg);
 
+        @include tablet {
+          transform: rotate(257deg);
+        }
+
         @include l-mobile {
-          height: 23vh;
+          width: 131px;
           transform: rotate(335deg);
         }
 
@@ -150,30 +151,32 @@
           top: 14%;
           right: 6%;
           width: 120px;
-          height: auto;
-          // height: 148px;
         }
       }
 
       &.hand-right {
         top: 50%;
         right: -10%;
-        height: 26vh;
+        height: auto;
+        width: 650px;
+        transform: rotate(7deg);
+
+        @include desktop {
+          right: -40%;
+        }
 
         @include tablet {
-          right: -60%;
-        } 
+          width: 623px;
+        }
 
         @include l-mobile {
-          height: 22vh;
-          transform: rotate(23deg);
+          width: 455px;
+          transform: rotate(41deg);
         }
 
         @include s-mobile {
           right: -80%;
           width: 475px;
-          height: auto;
-          // height: 129px;
         }
       }
     }

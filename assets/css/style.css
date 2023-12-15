@@ -1034,24 +1034,20 @@ select:focus {
           transform: translate(-50%, -50%);
   -webkit-transform-origin: center center;
           transform-origin: center center;
-  height: 85vh;
   opacity: 0;
+  width: 174px;
+  height: auto;
 }
-@media (max-width: 1023px) {
+@media (max-width: 767px) {
   .sc-hero .elemets-group a.wine {
-    height: 72vh;
-  }
-}
-@media (max-width: 479px) {
-  .sc-hero .elemets-group a.wine {
-    width: 147px;
-    height: auto;
+    width: 148px;
   }
 }
 .sc-hero .elemets-group a.hand-left {
   top: 40%;
   left: -10%;
-  height: 31vh;
+  width: 631px;
+  height: auto;
   -webkit-transform: rotate(341deg);
           transform: rotate(341deg);
 }
@@ -1063,28 +1059,28 @@ select:focus {
 @media (max-width: 1023px) {
   .sc-hero .elemets-group a.hand-left {
     left: -40%;
-    height: 28vh;
+    width: 600px;
   }
 }
 @media (max-width: 767px) {
   .sc-hero .elemets-group a.hand-left {
     -webkit-transform: rotate(310deg);
             transform: rotate(310deg);
-    height: 20vh;
     left: -40%;
+    width: 460px;
   }
 }
 @media (max-width: 479px) {
   .sc-hero .elemets-group a.hand-left {
-    width: 350px;
-    height: auto;
     left: -40%;
+    width: 350px;
   }
 }
 .sc-hero .elemets-group a.stone {
   top: 50%;
   left: 23%;
-  height: 24vh;
+  width: 256px;
+  height: auto;
   -webkit-transform: rotate(330deg);
           transform: rotate(330deg);
 }
@@ -1095,31 +1091,39 @@ select:focus {
 }
 @media (max-width: 1023px) {
   .sc-hero .elemets-group a.stone {
-    left: 5%;
+    left: 10%;
+    width: 233px;
   }
 }
 @media (max-width: 767px) {
   .sc-hero .elemets-group a.stone {
     top: 75%;
-    height: 17vh;
+    left: 10%;
+    width: 185px;
   }
 }
 @media (max-width: 479px) {
   .sc-hero .elemets-group a.stone {
     width: 162px;
-    height: auto;
   }
 }
 .sc-hero .elemets-group a.cone {
   top: 8%;
   right: 13%;
-  height: 29vh;
+  width: 173px;
+  height: auto;
   -webkit-transform: rotate(260deg);
           transform: rotate(260deg);
 }
+@media (max-width: 1023px) {
+  .sc-hero .elemets-group a.cone {
+    -webkit-transform: rotate(257deg);
+            transform: rotate(257deg);
+  }
+}
 @media (max-width: 767px) {
   .sc-hero .elemets-group a.cone {
-    height: 23vh;
+    width: 131px;
     -webkit-transform: rotate(335deg);
             transform: rotate(335deg);
   }
@@ -1129,31 +1133,37 @@ select:focus {
     top: 14%;
     right: 6%;
     width: 120px;
-    height: auto;
   }
 }
 .sc-hero .elemets-group a.hand-right {
   top: 50%;
   right: -10%;
-  height: 26vh;
+  height: auto;
+  width: 650px;
+  -webkit-transform: rotate(7deg);
+          transform: rotate(7deg);
+}
+@media (max-width: 1440px) {
+  .sc-hero .elemets-group a.hand-right {
+    right: -40%;
+  }
 }
 @media (max-width: 1023px) {
   .sc-hero .elemets-group a.hand-right {
-    right: -60%;
+    width: 623px;
   }
 }
 @media (max-width: 767px) {
   .sc-hero .elemets-group a.hand-right {
-    height: 22vh;
-    -webkit-transform: rotate(23deg);
-            transform: rotate(23deg);
+    width: 455px;
+    -webkit-transform: rotate(41deg);
+            transform: rotate(41deg);
   }
 }
 @media (max-width: 479px) {
   .sc-hero .elemets-group a.hand-right {
     right: -80%;
     width: 475px;
-    height: auto;
   }
 }
 .sc-hero .tag-wrapper {
